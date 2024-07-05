@@ -1,0 +1,21 @@
+
+.home {
+  padding: 3rem;
+  text-align: center;
+  background-color: var(--box-background);
+  border-radius: 10px;
+  margin: 7rem auto;
+  max-width: 800px;
+  box-shadow: 10px 10px 10px 1px var(--box-shadow);
+  color: var(--text-color);
+}
+
+.home h2 {
+  font-size: 2.5rem;
+  color: var(--text-color);
+}
+
+.home p {
+  font-size: 1.25rem;
+  color: var(--text-color);
+}

@@ -1,0 +1,55 @@
+/* src/Navbar.css */
+:root {
+  --primary-color: #007bff; /* vibrant blue */
+  --background-color: #ffffff; /* clean and professional */
+  --text-color: #333333; /* dark text for readability */
+  --button-background-color: #007bff; /* button background color */
+  --box-shadow: rgba(0, 0, 0, 0.2); /* adjust box shadow if needed */
+}
+
+.navbar {
+  background-color: var(--background-color);
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--text-color);
+  box-shadow: 10px 10px 10px 1px var(--box-shadow);
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+  padding: 0;
+  margin: 0;
+}
+
+.navbar ul li {
+  display: inline;
+}
+
+.navbar ul li a {
+  color: var(--text-color);
+  text-decoration: none;
+  font-size: 1.1rem;
+}
+
+.navbar ul li a:hover {
+  text-decoration: underline;
+}
+
+/* Optional, if you have separate nav-links class */
+.nav-links {
+  display: flex;
+  gap: 1rem;
+}
+
+.nav-link {
+  color: var(--text-color);
+  text-decoration: none;
+}
+
+.nav-link:hover {
+  text-decoration: underline;
+}
