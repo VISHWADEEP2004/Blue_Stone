@@ -3,7 +3,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import '../../Assets/Css/Login.css';
 
-function Login() {
+function Login({ setUsername }) {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
@@ -12,18 +12,20 @@ function Login() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setError(''); // Clear previous errors
-
+  
     try {
-      const response = await axios.get(`http://localhost:8080/api/registers`);
+      const response = await axios.get('http://localhost:8080/api/users');
       const userData = response.data;
       console.log('Fetched users:', userData);
-
+  
       const user = userData.find(user => user.email === email);
       if (user) {
+        console.log('User found:', user);
         if (user.password === password) {
-          console.log('Login successful');
+          console.log('Password matches');
           localStorage.setItem('isUserLoggedIn', 'true');
-          localStorage.setItem('username', email);
+          localStorage.setItem('username', user.username);
+          setUsername(user.username);
           navigate('/user/dashboard');
         } else {
           console.log('Invalid password');

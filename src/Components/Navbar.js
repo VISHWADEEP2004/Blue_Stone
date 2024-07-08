@@ -19,7 +19,7 @@ const Navbar=({ toggleTheme, theme })=> {
           <Link to="/about">About</Link>
         </li>
         <li>
-          <Link to="/register">Register</Link>
+          <Link to="/signup">Signup</Link>
         </li>
         <li>
           <Link to="/login">Login</Link>

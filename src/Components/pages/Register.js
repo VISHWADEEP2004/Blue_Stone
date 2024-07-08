@@ -3,8 +3,8 @@ import axios from 'axios';
 import '../../Assets/Css/Register.css';
 import { useNavigate } from 'react-router-dom';
 
-const Register = ({setUsername}) => {
-  const navigate=useNavigate();
+const Register = ({ setUsername }) => {
+  const navigate = useNavigate();
   const [formData, setFormData] = useState({
     firstName: '',
     lastName: '',
@@ -46,8 +46,6 @@ const Register = ({setUsername}) => {
       const response = await axios.post('http://localhost:8080/api/register', formData);
       console.log('Response:', response.data);
       alert('Registration successful!');
-      setUsername(response.data.firstName);
-      navigate('/user/dashboard');
       setFormData({
         firstName: '',
         lastName: '',
