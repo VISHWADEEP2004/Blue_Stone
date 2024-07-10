@@ -114,39 +114,3 @@ button {
   background-color: var(--box-background);
   box-shadow: 0 0 10px var(--box-shadow);
 }
-/* themes.css */
-/* :root {
-  --primary-color-light: #007bff;
-  --background-color-light: #ffffff;
-  --text-color-light: #333333;
-  --button-background-light: #007bff;
-
-  --primary-color-dark: #6c757d;
-  --background-color-dark: #343a40;
-  --text-color-dark: #ffffff;
-  --button-background-dark: #6c757d;
-}
-
-[data-theme="light"] {
-  --primary-color: var(--primary-color-light);
-  --background-color: var(--background-color-light);
-  --text-color: var(--text-color-light);
-  --button-background: var(--button-background-light);
-}
-
-[data-theme="dark"] {
-  --primary-color: var(--primary-color-dark);
-  --background-color: var(--background-color-dark);
-  --text-color: var(--text-color-dark);
-  --button-background: var(--button-background-dark);
-}
-
-body {
-  background-color: var(--background-color);
-  color: var(--text-color);
-}
-
-button {
-  background-color: var(--button-background);
-  color: var(--text-color);
-} */

@@ -1,13 +1,14 @@
 // src/Navbar.js
 import React from 'react';
 import { Link } from 'react-router-dom';
+import bs1 from '../Assets/Img/bs1.png';
 import '../Assets/Css/Navbar.css';
 import ThemeToggle from './pages/ThemeToggle';
 
 const Navbar=({ toggleTheme, theme })=> {
   return (
     <nav className="navbar">
-      <h1>BLUESTONE OVERSEAS CONSULTANT</h1>
+      <div><img src={bs1} style={{ width: '15rem', height: 'auto' }}/></div>
       <ul>
         <li>
           <Link to="/">Home</Link>

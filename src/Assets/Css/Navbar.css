@@ -8,15 +8,19 @@
 }
 
 .navbar {
+  
   background-color: var(--background-color);
+  position: fixed;
+  top: 0;
+  width: 100%; 
   padding: 1rem;
+  z-index: 1000;
   display: flex;
   justify-content: space-between;
   align-items: center;
   color: var(--text-color);
   box-shadow: 10px 10px 10px 1px var(--box-shadow);
 }
-
 .navbar ul {
   list-style: none;
   display: flex;
@@ -52,4 +56,7 @@
 
 .nav-link:hover {
   text-decoration: underline;
+}
+.navbar h1{
+  font-size: 1.2rem;
 }

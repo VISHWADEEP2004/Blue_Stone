@@ -1,0 +1,128 @@
+@import url("https://fonts.googleapis.com/css?family=Cardo:400i|Rubik:400,700&display=swap");
+
+:root {
+  --d: 700ms;
+  --e: cubic-bezier(0.19, 1, 0.22, 1);
+  --font-sans: "Rubik", sans-serif;
+  --font-serif: "Cardo", serif;
+  --card-background: #fff;
+  --card-border: rgb(137, 129, 129);
+  --card-icon-color: #007bff;
+  --card-btn-bg: #007bff;
+  --card-btn-bg-hover: #0056b3;
+}
+
+body[data-theme="dark"] {
+  --card-background: #000000;
+  --card-border: #aaa;
+  --card-icon-color: #ff5722;
+  --card-btn-bg: #ff5722;
+  --card-btn-bg-hover: #e64a19;
+}
+
+.main {
+  background-color: var(--background-color);
+  color: var(--text-color);
+  position: relative;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.background-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.3; /* Adjust the opacity as needed */
+  z-index: -1;
+}
+
+h1 {
+  font-family: var(--font-sans);
+  margin-bottom: 20px;
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 0;
+  list-style: none;
+}
+
+.cards_item {
+  display: flex;
+  justify-content: center;
+  margin: 10px;
+}
+
+.card-1 {
+  background-color: var(--card-background);
+  border: 1px solid var(--card-border);
+  border-radius: 8px;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), 0 2px 2px rgba(0, 0, 0, 0.1), 0 4px 4px rgba(0, 0, 0, 0.1), 0 8px 8px rgba(0, 0, 0, 0.1), 0 16px 16px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  width: 400px;
+  transition: transform var(--d) var(--e);
+}
+
+.card-1:hover {
+  transform: translateY(-10px);
+}
+
+.card_icon1 {
+  font-size: 3rem;
+  color: var(--card-icon-color);
+  text-align: center;
+  padding: 20px;
+}
+
+.card_content1 {
+  padding: 20px;
+  text-align: center;
+}
+
+.card_title1 {
+  font-family: var(--font-sans);
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.card_text1 {
+  font-family: var(--font-serif);
+  font-size: 1rem;
+  margin-bottom: 20px;
+}
+
+.card_btn {
+  background-color: var(--card-btn-bg);
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  text-transform: uppercase;
+  font-size: 0.875rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color var(--d) var(--e);
+}
+
+.card_btn:hover {
+  background-color: var(--card-btn-bg-hover);
+}
+
+@media (min-width: 768px) {
+  .cards_item {
+    width: calc(50% - 20px);
+  }
+}
+
+@media (min-width: 1024px) {
+  .cards_item {
+    width: calc(33.333% - 20px);
+  }
+}

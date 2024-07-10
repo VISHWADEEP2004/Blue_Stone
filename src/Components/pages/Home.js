@@ -1,13 +1,19 @@
 // src/Home.js
 import React from 'react';
 import '../../Assets/Css/Home.css';
+import Destination from './Destinations'
+import MyCarousel from './MyCarousel';
+import Details from './Details';
+import Footer from './Footer';
+import Services from './Services';
 
 function Home() {
   return (
-    <div className="home">
-      <h2>Welcome to BLUESTONE OVERSEAS CONSULTANT</h2>
-      <p>This is the home page of BLUESTONE OVERSEAS CONSULTANT application. Use the navigation bar to explore the Login, Sign Up, About, and Contact pages.</p>
-    </div>
+  <>
+    <MyCarousel/>
+    <Details/>
+     <Destination/>
+    </>
   );
 }
 

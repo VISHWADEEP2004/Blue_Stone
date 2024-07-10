@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 import '@fortawesome/fontawesome-free/css/all.min.css';
 
@@ -17,7 +16,7 @@ const UserDashboard = () => {
         return (
           <div className='dashboard-content'>
           <div className='container'>
-            <div className='card'>
+            <div className='card1'>
               <div className='card-header'>
                 {username && <h1 className="welcome-message">Welcome {username}</h1>}
               </div>
@@ -94,15 +93,15 @@ const UserDashboard = () => {
               <span className="nav-text">Logout</span>
             </Link>
            
-          </li>
+          </li>  
         </ul>
       </nav>
       <div className="right-content">
         <div className="user-info">
           <div className="icon-container">
-          <i className="fa-solid fa-user"/>
           </div>
-          <h4>{username}</h4>
+          <h4><i className="fa-solid fa-user"/>  {username}</h4>
+          
         </div>
         <div className="dashboard-content">
           {renderComponent()}

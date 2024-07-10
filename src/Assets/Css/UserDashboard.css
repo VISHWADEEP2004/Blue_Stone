@@ -1,15 +1,9 @@
 
-
-
-
-
-
-
 .dashboard-content {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 9rem;
+  margin-bottom: 30rem;
 } 
 
 
@@ -82,7 +76,7 @@ main {
 .right-content {
   flex-grow: 1;
   background-color: #f8f9fa; /* Light background */
-  padding: 20px;
+  padding: 10px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;

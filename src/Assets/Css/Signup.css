@@ -1,0 +1,67 @@
+/* src/Assets/Css/Signup.css */
+
+.wrapper-s {
+    max-width: 400px;
+    margin: 10rem auto 5rem; /* Centering the form vertically and horizontally */
+    background-color: var(--box-background);
+    padding: 10px 30px;
+    border-radius: 5px;
+    box-shadow: 10px 10px 10px 1px var(--box-shadow);
+    color: var(--text-color);
+  }
+  
+  .title-s {
+    font-size: 24px;
+    font-weight: 500;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  form {
+    margin-top: 20px;
+  }
+  
+  .user-details-s {
+    display: none;
+  }
+  
+  .active {
+    display: block;
+  }
+  
+  .input-box-s {
+    margin-bottom: 15px;
+  }
+  
+  .input-box-s input,
+  .input-box-s textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    color: #000;
+    background-color: #fff;
+  }
+  
+  .dark-mode .input-box-s input,
+  .dark-mode .input-box-s textarea {
+    color: #000;
+    background-color: #fff;
+  }
+  
+  .button-container-s {
+    display: flex;
+    justify-content: center; /* Center the buttons horizontally */
+    margin-top: 20px;
+  }
+  
+  .button-s input[type="submit"] {
+    background: var(--button-background);
+    color: var(--button-color);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  

@@ -1,11 +1,12 @@
 import React, { useState } from 'react';
 import axios from 'axios';
-import '../../Assets/Css/Register.css';
+import '../../Assets/Css/Signup.css';
 import { useNavigate } from 'react-router-dom';
 
 const Signup = ({ setUsername }) => {
   const navigate = useNavigate();
   const [formData, setFormData] = useState({
+    name: '',
     username: '',
     email: '',
     password: '',
@@ -26,6 +27,7 @@ const Signup = ({ setUsername }) => {
       setUsername(response.data.username);
       navigate('/login');
       setFormData({
+        name: '',
         username: '',
         email: '',
         password: '',
@@ -37,11 +39,22 @@ const Signup = ({ setUsername }) => {
   };
 
   return (
-    <div className="wrapper">
-      <div className="title">Signup</div>
-      <form onSubmit={handleSubmit} className="form-step">
-        <div className="user-details active">
-          <div className="input-box">
+    <div className="wrapper-s">
+      <div className="title-s">Signup</div>
+      <form onSubmit={handleSubmit} className="form-step-s">
+        <div className="user-details-s active">
+          <div className="input-box-s">
+            <span className="details-s">Name</span>
+            <input
+              type="text"
+              placeholder="Enter your name"
+              name="name"
+              value={formData.name}
+              onChange={handleChange}
+              required
+            />
+          </div>
+          <div className="input-box-s">
             <span className="details">Username</span>
             <input
               type="text"
@@ -52,7 +65,7 @@ const Signup = ({ setUsername }) => {
               required
             />
           </div>
-          <div className="input-box">
+          <div className="input-box-s">
             <span className="details">Email</span>
             <input
               type="email"
@@ -63,7 +76,7 @@ const Signup = ({ setUsername }) => {
               required
             />
           </div>
-          <div className="input-box">
+          <div className="input-box-s">
             <span className="details">Password</span>
             <input
               type="password"
@@ -74,8 +87,8 @@ const Signup = ({ setUsername }) => {
               required
             />
           </div>
-          <div className="button-container">
-            <div className="button">
+          <div className="button-container-s">
+            <div className="button-s">
               <input type="submit" value="Submit" />
             </div>
           </div>

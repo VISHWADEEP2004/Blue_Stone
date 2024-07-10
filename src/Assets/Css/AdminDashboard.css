@@ -1,48 +1,126 @@
-/* src/AdminDashboard.css */
-.admin-dashboard {
-    padding: 2rem;
-    text-align: center;
+
+
+
+
+
+
+
+.dashboard-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 1rem;
+} 
+
+
+
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* Main Layout */
+main {
+  display: flex;
+  height: 100vh;
+}
+
+/* Navigation Menu */
+.main-menu {
+  width: 250px;
+  background-color: #007bff; /* Primary color */
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px 0;
+}
+
+.main-menu h1 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.main-menu .logo {
+  width: 100px;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+.main-menu ul {
+  list-style: none;
+  padding: 0;
+  width: 100%;
+}
+
+.main-menu .nav-item {
+  width: 100%;
+  margin-bottom: 10px;
+  text-align: center;
+  transition: background-color 0.3s;
+}
+
+.main-menu .nav-item.active,
+.main-menu .nav-item:hover {
+  background-color: #0056b3; /* Darker shade of primary color */
+}
+
+.main-menu .nav-item a {
+  display: block;
+  padding: 10px 20px;
+  color: white;
+  text-decoration: none;
+}
+
+.main-menu .nav-item .nav-icon {
+  margin-right: 10px;
+}
+
+/* Right Content */
+.right-content {
+  flex-grow: 1;
+  background-color: #f8f9fa; /* Light background */
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.right-content .user-info {
+  display: flex;
+  align-items: center; /* Align items vertically */
+  padding: 10px 0;
+}
+
+.right-content .user-info .icon-container {
+  display: flex;
+  align-items: center;
+}
+
+.right-content .user-info .icon-container .nav-icon {
+  font-size: 20px;
+  color: #333;
+  margin-right: 5px; /* Adjust margin for spacing */
+}
+
+.right-content .user-info h4 {
+  margin-left: 5px; /* Adjust margin for spacing */
+  font-size: 18px;
+  color: #333;
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .main-menu {
+    width: 200px;
   }
   
-  .admin-dashboard h2 {
-    font-size: 2.5rem;
-    color: #333;
+  .main-menu h1 {
+    font-size: 20px;
   }
-  
-  .logout-button {
-    margin: 1rem 0;
-    padding: 0.5rem 1rem;
-    background-color: #d9534f;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
+
+  .main-menu .logo {
+    width: 80px;
   }
-  
-  .logout-button:hover {
-    background-color: #c9302c;
-  }
-  
-  .dashboard-sections {
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-  }
-  
-  .dashboard-section {
-    padding: 1rem;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    background-color: #f9f9f9;
-  }
-  
-  .dashboard-section h3 {
-    font-size: 1.75rem;
-    color: #555;
-  }
-  
-  .dashboard-section p {
-    font-size: 1.25rem;
-    color: #777;
-  }
-  
+}

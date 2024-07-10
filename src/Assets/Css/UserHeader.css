@@ -1,0 +1,29 @@
+/* UserHeader.css */
+
+.user-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #007bff; /* Primary color */
+    color: white;
+    padding: 10px 20px;
+  }
+  
+  .user-header h1 {
+    font-size: 24px;
+    margin: 0;
+  }
+  
+  .user-info {
+    display: flex;
+    align-items: center;
+  }
+  
+  .user-info h4 {
+    margin: 0 10px;
+  }
+  
+  .fa-solid.fa-user {
+    font-size: 20px;
+  }
+  
