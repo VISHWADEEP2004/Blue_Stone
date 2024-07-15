@@ -1,21 +1,50 @@
-/* src/About.css */
+/* src/Assets/Css/About.css */
+:root {
+  --primary-color: #007bff;
+  --background-color: #ffffff;
+  --text-color: #333333;
+}
+
+[data-theme="dark"] {
+  --background-color: #333333;
+  --text-color: #f9f9f9;
+  --primary-color: #007bff;
+}
+
 .about {
-  padding: 2rem;
   text-align: center;
-  background-color: var(--box-background);
-  border-radius: 10px;
-  margin: 15rem auto;
-  max-width: 800px;
-  box-shadow: 10px 10px 10px 1px var(--box-shadow);
+  padding: 50px;
+  max-width: 900px;
+  margin: 0 auto;
+  font-family: Arial, sans-serif;
+  background-color: var(--background-color);
   color: var(--text-color);
 }
 
 .about h2 {
-  font-size: 2.5rem;
-  color: var(--text-color);
+  color: var(--primary-color);
+  font-size: 2.5em;
+  margin-bottom: 20px;
+}
+
+.about-images {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.round-image {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
 }
 
 .about p {
-  font-size: 1.25rem;
   color: var(--text-color);
+  font-size: 1.2em;
+  line-height: 1.8;
+  margin-bottom: 20px;
 }

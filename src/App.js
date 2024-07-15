@@ -16,6 +16,8 @@ import Actions from './Components/Admin/Actions';
 import ViewUsers from './Components/Admin/ViewUsers';
 import AddUser from './Components/Admin/AddUser';
 import EditUser from './Components/Admin/EditUser';
+import Footer from './Components/pages/Footer'; // Import Footer component here
+import Services from './Components/pages/Services';
 
 function App() {
   const [theme, setTheme] = useState('light');
@@ -33,15 +35,30 @@ function App() {
     setUsername(`${firstName} ${lastName}`);
   };
 
+  const shouldHideFooter = (pathname) => {
+    const noFooterRoutes = [
+      '/admin/dashboard', 
+      '/user/dashboard', 
+      '/user/register', 
+      '/admin/actions',
+      '/admin/viewuser/',
+      '/admin/edituser/',
+      '/admin/adduser',
+    ];
+    return noFooterRoutes.some(route => matchPath(route, pathname));
+  };
+
   return (
     <Router>
       <div className="App">
         <ConditionalNavbar />
+        <ScrollToTop/>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/login" element={<Login setUsername={handleSetUsername} />} />
-          <Route path="/signup" element={<Signup setUsername={handleSetUsername}/>} />
+          <Route path="/signup" element={<Signup setUsername={handleSetUsername} />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/services" element={<Services />} />
           <Route path="/about" element={<About />} />
           <Route path="/admin/login" element={<AdminLogin />} />
           <Route path="/admin/dashboard" element={<PrivateRoute element={<AdminDashboard />} type="admin" />} />
@@ -51,9 +68,8 @@ function App() {
           <Route path="/admin/edituser/:id" element={<PrivateRoute element={<EditUser />} type="admin" />} />
           <Route path="/user/dashboard" element={<PrivateRoute element={<UserDashboard username={username} />} type="user" />} />
           <Route path="/user/register" element={<PrivateRoute element={<Register />} type="user" />} />
-          {/* <Route path="/user/universities" element={<PrivateRoute element={<UserUniversities />} type="user" />} />
-          <Route path="/user/certifications" element={<PrivateRoute element={<UserCertifications />} type="user" />} /> */}
         </Routes>
+        {!shouldHideFooter(window.location.pathname) && <Footer />} 
       </div>
     </Router>
   );
@@ -74,6 +90,14 @@ function ConditionalNavbar() {
   const shouldHideNavbar = noNavbarRoutes.some(route => matchPath(route, location.pathname));
 
   return !shouldHideNavbar ? <Navbar /> : null;
+ 
+}
+function ScrollToTop(){
+  const {pathname} =useLocation();
+  useEffect(() =>{
+    window.scrollTo(0,0);
+  },[pathname]);
+  return null;
 }
 
 export default App;

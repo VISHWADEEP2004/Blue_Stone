@@ -1,123 +1,108 @@
-
-.dashboard-content {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 30rem;
-} 
-
-
-
-/* General Styling */
-body, html {
+.userdashboard, .userdashboard html, .userdashboard body {
   margin: 0;
   padding: 0;
   font-family: Arial, sans-serif;
+  height: 100%;
+  overflow: hidden;
 }
 
-/* Main Layout */
-main {
-  display: flex;
-  height: 100vh;
-}
-
-/* Navigation Menu */
-.main-menu {
+.userdashboard .main-menu {
   width: 250px;
-  background-color: #007bff; /* Primary color */
-  color: white;
+  background-color: #333; /* Dark sidebar background */
+  color: #ffffff; /* Light text color */
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 20px 0;
-}
-
-.main-menu h1 {
-  font-size: 24px;
-  margin-bottom: 20px;
-}
-
-.main-menu .logo {
-  width: 100px;
-  height: auto;
-  margin-bottom: 20px;
-}
-
-.main-menu ul {
-  list-style: none;
   padding: 0;
+  position: fixed;
+  top: 80px; 
+  bottom: 0;
+  overflow-y: auto;
+}
+
+.userdashboard .main-menu ul {
+  list-style: none;
   width: 100%;
 }
 
-.main-menu .nav-item {
+.userdashboard .main-menu .nav-item {
   width: 100%;
   margin-bottom: 10px;
   text-align: center;
   transition: background-color 0.3s;
 }
 
-.main-menu .nav-item.active,
-.main-menu .nav-item:hover {
-  background-color: #0056b3; /* Darker shade of primary color */
+.userdashboard .main-menu .nav-item.active,
+.userdashboard .main-menu .nav-item:hover {
+  background-color: #444; /* Slightly lighter shade for active/hover state */
 }
 
-.main-menu .nav-item a {
+.userdashboard .main-menu .nav-item a {
   display: block;
-  padding: 10px 20px;
-  color: white;
+  padding: 20px;
+  color: #fff; /* Light text color */
   text-decoration: none;
+  transition: color 0.3s, background-color 0.3s; /* Smooth transition */
 }
 
-.main-menu .nav-item .nav-icon {
+.userdashboard .main-menu .nav-item .nav-icon {
   margin-right: 10px;
 }
 
-/* Right Content */
-.right-content {
+.userdashboard .right-content {
   flex-grow: 1;
-  background-color: #f8f9fa; /* Light background */
-  padding: 10px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  background-color: #ffffff; /* Light background */
+  padding-top: 10px;
+  overflow-y: auto;
+  margin-left: 250px; /* Adjust for sidebar width */
 }
 
-.right-content .user-info {
+.userdashboard .right-content .user-info {
   display: flex;
   justify-content: flex-end;
   align-items: center;
   padding: 10px 0;
 }
 
-.right-content .user-info .icon-container {
+.userdashboard .right-content .user-info .icon-container {
   display: flex;
   align-items: center;
-  margin-right: 20px;
+  margin-right: 50px;
 }
 
-.right-content .user-info .icon-container .nav-icon {
+.userdashboard .right-content .user-info .icon-container .nav-icon {
   font-size: 20px;
   color: #333; /* Text color */
   margin-left: 10px;
 }
 
-.right-content .user-info h4 {
+.userdashboard .right-content .user-info h4 {
   margin: 0;
   font-size: 18px;
   color: #333; /* Text color */
 }
 
-/* Responsive Design */
+.userdashboard .dashboard-content {
+  padding-top: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 @media (max-width: 768px) {
-  .main-menu {
+  .userdashboard .main-menu {
     width: 200px;
   }
-  
-  .main-menu h1 {
+
+  .userdashboard .right-content {
+    margin-left: 200px; /* Adjust for sidebar width */
+  }
+
+  .userdashboard .main-menu h1 {
     font-size: 20px;
   }
 
-  .main-menu .logo {
+  .userdashboard .main-menu .logo {
     width: 80px;
   }
 }

@@ -1,33 +1,38 @@
-@import url("https://fonts.googleapis.com/css?family=Cardo:400i|Rubik:400,700&display=swap");
-
+/* src/Assets/Css/Details.css */
 :root {
   --d: 700ms;
   --e: cubic-bezier(0.19, 1, 0.22, 1);
   --font-sans: "Rubik", sans-serif;
   --font-serif: "Cardo", serif;
-  --card-background: #fff;
+
+  --background-color: #ffffff;
+  --text-color: #333333;
+  --card-background: #ffffff;
   --card-border: rgb(137, 129, 129);
   --card-icon-color: #007bff;
   --card-btn-bg: #007bff;
   --card-btn-bg-hover: #0056b3;
 }
 
-body[data-theme="dark"] {
-  --card-background: #000000;
-  --card-border: #aaa;
-  --card-icon-color: #ff5722;
-  --card-btn-bg: #ff5722;
-  --card-btn-bg-hover: #e64a19;
+[data-theme="dark"] {
+  --background-color: #333333;
+  --text-color: #f9f9f9;
+  --card-background: #444444;
+  --card-border: #555555;
+  --card-icon-color: #007bff;
+  --card-btn-bg: #007bff;
+  --card-btn-bg-hover: #0056b3;
 }
 
 .main {
   background-color: var(--background-color);
   color: var(--text-color);
   position: relative;
-  padding: 20px;
+  padding: 30px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  z-index: 1;
 }
 
 .background-image {
@@ -37,7 +42,7 @@ body[data-theme="dark"] {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  opacity: 0.3; /* Adjust the opacity as needed */
+  opacity: 0.3; /* Consistent opacity */
   z-index: -1;
 }
 

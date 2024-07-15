@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import Header from '../User/Header';
 import { Link } from 'react-router-dom';
 import Actions from './Actions';
 import '../../Assets/Css/AdminDashboard.css'
@@ -33,9 +34,9 @@ const AdminDashboard = () => {
   };
 
   return (
-    <main>
+    <main className='admindashboard'>
+      <Header/>
       <nav className="main-menu">
-        <h1>BLUESTONE</h1>
         
         <ul>
           <li className={`nav-item ${currentComponent === 'home' ? 'active' : ''}`} onClick={() => setCurrentComponent('home')}>
